@@ -11,18 +11,25 @@ def main():
     print("Screen width: 1280")
     print("Screen height: 720")
 
-    log_state()
+    clock = pygame.time.Clock()
+    dt = 0
 
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 return
+        
+        log_state()
 
-    screen.fill("black")
+        screen.fill("black")
 
 
-    pygame.display.flip()
+        pygame.display.flip()
+
+        dt = clock.tick(60) / 1000.0
+
+        
 
 
 if __name__ == "__main__":
