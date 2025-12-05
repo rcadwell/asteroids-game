@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+#New addition:
+game_state.jsonl
